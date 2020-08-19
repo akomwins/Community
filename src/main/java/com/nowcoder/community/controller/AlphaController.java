@@ -184,4 +184,12 @@ public class AlphaController {
         return "get session";
 
     }
+    //ajax实例
+    @RequestMapping(path="/ajax",method = RequestMethod.POST)
+    @ResponseBody
+    public String testAjax(String name,int age){
+        System.out.println(name+" "+age);
+        return CommunityUtil.getJSONString(0,"操作成功");
+
+    }
 }

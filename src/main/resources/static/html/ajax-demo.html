@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax-demo</title>
+</head>
+<body>
+    <p>
+        <input type="button" value="发送" onclick="send();">
+    </p>
+</body>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js" crossorigin="anonymous"></script>
+<script>
+    function send() {
+        $.post(
+            "/community/alpha/ajax",
+            {"name":"张三","age":23},
+            function (data) {
+            //    data是服务器返回给浏览器的数据
+                console.log(typeof(data));
+                console.log(data);
+                //字符串转js对象
+                data=$.parseJSON(data);
+                console.log(data.code);
+                console.log(data.msg );
+
+            }
+        );
+
+    }
+</script>
+</html>

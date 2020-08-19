@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <contextName>community</contextName>
-    <property name="LOG_PATH" value="/home/yewenxuan/Downloads/Springboot/work/data"/>
+    <property name="LOG_PATH" value="/Users/xiewenxuan/Downloads/toMac/Springboot/work/data"/>
     <property name="APPDIR" value="community"/>
 
     <!-- error file -->
